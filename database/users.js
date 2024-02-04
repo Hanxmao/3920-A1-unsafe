@@ -27,19 +27,8 @@ async function createUser(postData) {
 	}
 }
 
-async function getUser(postData) {
-	let getUserSQL = `
-		SELECT user_id, username, password
-		FROM user
-		WHERE username = :user;
-	`;
-
-	let params = {
-		user: postData.user
-	}
-	
+async function getUser(postData) {	
 	try {
-		// const results = await database.query(getUserSQL, params);
 		const results = await database.query( `SELECT user_id, username, password FROM user WHERE username = '${postData.user}';`);
 
         console.log("Successfully found user");
