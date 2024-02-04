@@ -1,0 +1,17 @@
+<%- include("templates/header") %> 
+    create user
+    <form action='/submitUser' method='post'>
+    <input name='username' type='text' placeholder='username'>
+    <input name='password' type='password' placeholder='password'>
+    <button>Submit</button>
+    </form>
+    <% if (missing==0) { %>
+        <br> Password is required and length must longer than 0!
+    <% } %>  
+    <% if (missing==1) { %>
+        <br> Username is required!
+    <% } %> 
+    <% if (missing==2) { %>
+        <br> Password and username is required!
+    <% } %>   
+<%- include("templates/footer") %> 

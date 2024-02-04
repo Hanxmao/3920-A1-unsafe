@@ -1,0 +1,10 @@
+<%- include("templates/header", {scripts: ["https://code.jquery.com/jquery-3.6.3.js"]}) %>
+    <% if (!showName) { %>
+        <a href="/login" style="font-size:x-large;display: block;">Log in</a>
+        <a href="/signup" style="font-size:x-large;display: block;">Sign up</a> 
+    <% }else{ %>
+        <h1>Hello <%- username %>
+            <a href="/members" style="font-size:x-large;display: block;">Go to Members Area</a>
+            <a href="/logout" style="font-size:x-large;display: block;">Logout</a> 
+    <% } %>
+<%- include("templates/footer") %> 

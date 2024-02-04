@@ -1,0 +1,5 @@
+<%- include("templates/header", {scripts: ["https://code.jquery.com/jquery-3.6.3.js"]}) %> 
+    <h1>Hello <%- username %>!</h1>
+    <img src=<%= `/${randNum}.jpg` %> width="300" height="200"/>
+    <a href="/logout" style="font-size:x-large;display: block;">Logout</a> 
+<%- include("templates/footer") %> 
